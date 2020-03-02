@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace LaravelForum\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;

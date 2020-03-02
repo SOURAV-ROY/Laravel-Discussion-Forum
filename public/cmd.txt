@@ -6,3 +6,11 @@ php artisan make:seeder ChannelsTableSeeder
 ***************************************************
 composer require laravel/helpers >>>>>>>Laravel 6.0
 **************************************************
+https://github.com/andrey-helldar/laravel-app
+**************************************************
+composer require andrey-helldar/laravel-app --dev
+**************************************************
+php artisan app:name LaravelForum
+**************************************************
+php artisan migrate:refresh --seed
+**************************************************
