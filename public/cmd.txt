@@ -1,0 +1,8 @@
+php artisan make:model Discussion -m
+***************************************************
+php artisan make:model Channel -m
+***************************************************
+php artisan make:seeder ChannelsTableSeeder
+***************************************************
+composer require laravel/helpers >>>>>>>Laravel 6.0
+**************************************************
