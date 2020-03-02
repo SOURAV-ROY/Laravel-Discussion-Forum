@@ -173,6 +173,7 @@ return [
         LaravelForum\Providers\AuthServiceProvider::class,
         // LaravelForum\Providers\BroadcastServiceProvider::class,
         LaravelForum\Providers\EventServiceProvider::class,
+        LaravelForum\Providers\TelescopeServiceProvider::class,
         LaravelForum\Providers\RouteServiceProvider::class,
 
     ],
