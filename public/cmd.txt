@@ -19,3 +19,5 @@ php artisan migrate:refresh --seed
         });
 https://laracasts.com/discuss/channels/general-discussion/how-to-share-authuser-with-all-views?page=1
 **************************************************
+php artisan make:controller DiscussionsController --resource
+*************************************************************
