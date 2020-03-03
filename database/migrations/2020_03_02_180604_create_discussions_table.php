@@ -17,7 +17,7 @@ class CreateDiscussionsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->string('title');
-            $table->text('content');
+            $table->text('detail');
             $table->string('slug')->unique(); //What is Laravel => What is Laravel
             $table->integer('channel_id');
             $table->timestamps();

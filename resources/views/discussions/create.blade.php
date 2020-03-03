@@ -17,9 +17,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="content">Content</label>
-                    <input id="content" type="hidden" name="content">
-                    <trix-editor input="content"></trix-editor>
+                    <label for="detail">Content</label>
+                    <input id="detail" type="hidden" name="detail">
+                    <trix-editor input="detail"></trix-editor>
                 </div>
 
                 <div class="form-group">
