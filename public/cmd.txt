@@ -14,3 +14,8 @@ php artisan app:name LaravelForum
 **************************************************
 php artisan migrate:refresh --seed
 **************************************************
+\View::composer('*', function($view){
+            $view->with('channels', Channel::all());
+        });
+https://laracasts.com/discuss/channels/general-discussion/how-to-share-authuser-with-all-views?page=1
+**************************************************
