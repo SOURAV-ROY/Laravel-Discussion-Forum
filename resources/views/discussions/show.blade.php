@@ -14,6 +14,30 @@
         </div>
     </div>
 
+    @foreach($discussion->replies()->paginate(2) as $reply)
+        <div class="card my-2">
+            <div class="card-header">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <img
+                            src="{{Gravatar::src($reply->owner->email)}}"
+                            style="width: 30px; height: 30px; border-radius: 30%"
+                            alt=""
+                        >
+                        <span>{{$reply->owner->name}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                {!! $reply->answer !!}
+            </div>
+        </div>
+    @endforeach
+
+    <div class="d-flex justify-content-center">
+        {{$discussion->replies()->paginate(2)->links()}}
+    </div>
+
     <div class="card my-3">
         <div class="card-header text-primary text-center font-weight-bolder">
             Add a Reply
@@ -24,7 +48,6 @@
                     @csrf
                     <input type="hidden" name="answer" id="answer">
                     <trix-editor input="answer"></trix-editor>
-
                     <div class="text-center my-2">
                         <button type="submit" class="btn btn-info">Add Reply</button>
                     </div>
