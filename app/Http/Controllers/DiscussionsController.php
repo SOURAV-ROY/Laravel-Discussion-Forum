@@ -65,7 +65,7 @@ class DiscussionsController extends Controller
     public function show(Discussion $discussion)
     {
         return view('discussions.show', [
-            'discussion' => 'discussion'
+            'discussion' => $discussion
         ]);
     }
 

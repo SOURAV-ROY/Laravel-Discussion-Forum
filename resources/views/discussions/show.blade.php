@@ -2,10 +2,16 @@
 
 @section('content')
     <div class="card">
-        <div class="card-header">Dashboard</div>
+
+        @include('partials.discussion-header')
 
         <div class="card-body">
-            Discussion Title
+            <div class="text-center">
+                <strong>{{$discussion->title }}</strong>
+            </div>
+            <hr>
+            {!! $discussion->detail !!}
         </div>
+
     </div>
 @endsection
