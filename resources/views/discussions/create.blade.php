@@ -1,13 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="d-flex justify-content-end mb-2">
-    </div>
+
     <div class="card">
         <div class="card-header text-center font-weight-bold">Add Discussion</div>
 
         <div class="card-body">
-
+            {{--****************************************ERROR MESSAGE****************************************--}}
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="list-group">
+                        @foreach($errors->all() as $error)
+                            <li class="list-group-item text-danger">
+                                {{$error}}
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            {{--************************************* END ERROR MESSAGE****************************************--}}
             <form action="{{route('discussions.store')}} " method="POST">
                 @csrf
 
@@ -40,6 +51,7 @@
 
         </div>
     </div>
+
 @endsection
 
 @section('css')

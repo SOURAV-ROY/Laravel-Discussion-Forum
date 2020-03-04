@@ -22,7 +22,7 @@ class DiscussionsController extends Controller
     public function index()
     {
         return view('discussions.index', [
-            'discussions' => Discussion::paginate(3)
+            'discussions' => Discussion::paginate(5)
         ]);
     }
 
@@ -62,9 +62,11 @@ class DiscussionsController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Discussion $discussion)
     {
-        //
+        return view('discussions.show', [
+            'discussion' => 'discussion'
+        ]);
     }
 
     /**
