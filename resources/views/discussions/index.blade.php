@@ -2,22 +2,26 @@
 
 @section('content')
 
-    <div class="container">
-        @foreach($discussions as $discussion)
-            <div class="card">
-                <div class="card-header text-center font-weight-bolder">
-                    {{$discussion->title}}
-                </div>
-
-                <div class="card-body">
-                    {!! $discussion->detail !!}
-                </div>
+    @foreach($discussions as $discussion)
+        <div class="card">
+            <div class="card-header text-center font-weight-bolder">
+                <img src="{{Gravatar::src($discussion->user->email)}}"
+                     class="float-left"
+                     style="width: 30px; border-radius: 30%"
+                     alt="{{$discussion->user->name}}"
+                >
+                <strong class="text-success">{{$discussion->title}}</strong>
             </div>
-        @endforeach
-        <br>
-        <div class="d-flex justify-content-center">
-            {{$discussions->links()}}
+
+            <div class="card-body">
+                {!! $discussion->detail !!}
+            </div>
         </div>
+        <br>
+    @endforeach
+
+    <div class="d-flex justify-content-center">
+        {{$discussions->links()}}
     </div>
 
 @endsection

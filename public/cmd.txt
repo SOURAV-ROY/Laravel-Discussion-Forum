@@ -23,3 +23,7 @@ php artisan make:controller DiscussionsController --resource
 *************************************************************
 php artisan make:request CreateDiscussionRequest
 *************************************************************
+"thomaswelton/laravel-gravatar": "~1.0"
+*************************************************************
+composer update
+*************************************************************
