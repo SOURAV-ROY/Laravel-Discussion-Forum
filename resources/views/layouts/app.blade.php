@@ -78,14 +78,24 @@
         <main class="container py-4">
             <div class="row">
                 <div class="col-md-3">
-                    <ul class="list-group text-center font-weight-bold">
-                        {{--{{$channels}}--}}
-                        @foreach($channels as $channel)
-                            <li class="list-group-item">
-                                {{$channel->name}}
-                            </li>
-                        @endforeach
-                    </ul>
+                    <a href="{{route('discussions.create')}}" class="col col-12 font-weight-bolder btn btn-success mb-2">
+                        ADD DISCUSSION
+                    </a>
+                    <div class="card">
+                        <div class="card-header text-danger text-center font-weight-bolder">
+                            CHANNELS
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group text-primary text-center font-weight-bold">
+                                {{--{{$channels}}--}}
+                                @foreach($channels as $channel)
+                                    <li class="list-group-item">
+                                        {{$channel->name}}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-9">
                     @yield('content')

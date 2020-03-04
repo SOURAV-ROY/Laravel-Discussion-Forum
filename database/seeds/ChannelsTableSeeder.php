@@ -15,7 +15,7 @@ class ChannelsTableSeeder extends Seeder
     {
         Channel::create([
             'name' => 'Laravel 6.0',
-            'slug' => str_slug('Laravel 6.0'),
+            'slug' => str_slug('Laravel 6.0')
 
         ]);
 

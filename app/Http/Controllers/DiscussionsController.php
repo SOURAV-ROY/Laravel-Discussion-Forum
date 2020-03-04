@@ -22,7 +22,7 @@ class DiscussionsController extends Controller
     public function index()
     {
         return view('discussions.index', [
-            'discussions' => Discussion::paginate(5)
+            'discussions' => Discussion::paginate(3)
         ]);
     }
 
@@ -53,7 +53,7 @@ class DiscussionsController extends Controller
 
         session()->flash('success', 'Discussion Create Successfully !!');
 
-        return redirect()->route('discussion.index');
+        return redirect()->route('discussions.index');
     }
 
     /**
