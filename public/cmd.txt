@@ -29,3 +29,7 @@ composer update
 *************************************************************
 php artisan make:controller RepliesController --resource
 *************************************************************
+php artisan make:model Reply -m
+*************************************************************
+php artisan make:request CreateReplyRequest
+*************************************************************

@@ -22,8 +22,8 @@
             @auth
                 <form action="{{route('replies.store', $discussion->slug)}}" method="POST">
                     @csrf
-                    <input type="hidden" name="reply" id="reply">
-                    <trix-editor input="reply"></trix-editor>
+                    <input type="hidden" name="answer" id="answer">
+                    <trix-editor input="answer"></trix-editor>
 
                     <div class="text-center my-2">
                         <button type="submit" class="btn btn-info">Add Reply</button>
