@@ -20,14 +20,18 @@
         </div>
         <div class="card-body">
             @auth
-                <form action="" method="POST">
+                <form action="{{route('replies.store', $discussion->slug)}}" method="POST">
                     @csrf
                     <input type="hidden" name="reply" id="reply">
                     <trix-editor input="reply"></trix-editor>
+
+                    <div class="text-center my-2">
+                        <button type="submit" class="btn btn-info">Add Reply</button>
+                    </div>
                 </form>
             @else
                 <div class="text-center">
-                    <a href="{{route('login')}}" class="btn btn-primary">Sign To Reply</a>
+                    <a href="{{route('login')}}" class="btn btn-info">Sign To Reply</a>
                 </div>
             @endauth
         </div>

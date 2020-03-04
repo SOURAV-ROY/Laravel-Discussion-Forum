@@ -27,3 +27,5 @@ php artisan make:request CreateDiscussionRequest
 *************************************************************
 composer update
 *************************************************************
+php artisan make:controller RepliesController --resource
+*************************************************************
