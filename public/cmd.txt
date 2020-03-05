@@ -37,3 +37,5 @@ php artisan migrate:refresh --seed
 *************************************************************
 php artisan make:notification NewReplyAdded
 *************************************************************
+php artisan notifications:table
+*************************************************************
