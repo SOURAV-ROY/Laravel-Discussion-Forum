@@ -16,7 +16,21 @@
             @if($discussion->bestReply)
                 <div class="card my-3">
                     <div class="card card-header text-center bg-dark text-warning">
-                        BEST REPLY
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <img src="{{Gravatar::src($discussion->bestReply->owner->email)}}"
+                                     class="mr-2"
+                                     style="width: 30px; height: 30px; border-radius: 30%"
+                                     alt="{{$discussion->author->name}}"
+                                >
+                                <strong class="text-success">
+                                    {{$discussion->bestReply->owner->name}}
+                                </strong>
+                            </div>
+                            <div>
+                                BEST REPLY
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body bg-success text-white">
                         {!! $discussion->bestReply->answer !!}
