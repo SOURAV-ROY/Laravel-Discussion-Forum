@@ -39,3 +39,5 @@ php artisan make:notification NewReplyAdded
 *************************************************************
 php artisan notifications:table
 *************************************************************
+php artisan make:controller UsersController
+*************************************************************
