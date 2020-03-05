@@ -13,10 +13,10 @@
             {!! $discussion->detail !!}
         </div>
     </div>
-
-    @foreach($discussion->replies()->paginate(2) as $reply)
+{{----}}
+    @foreach($discussion->replies()->paginate(5) as $reply)
         <div class="card my-2">
-            <div class="card-header">
+            <div class="card-header border border-success">
                 <div class="d-flex justify-content-between">
                     <div>
                         <img
@@ -28,14 +28,14 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body">
+            <div class="card-body border border-primary">
                 {!! $reply->answer !!}
             </div>
         </div>
     @endforeach
 
     <div class="d-flex justify-content-center">
-        {{$discussion->replies()->paginate(2)->links()}}
+        {{$discussion->replies()->paginate(5)->links()}}
     </div>
 
     <div class="card my-3">
