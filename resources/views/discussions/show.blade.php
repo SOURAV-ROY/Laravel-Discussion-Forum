@@ -10,10 +10,24 @@
                 <strong>{{$discussion->title }}</strong>
             </div>
             <hr>
+
             {!! $discussion->detail !!}
+
+            @if($discussion->bestReply)
+                <div class="card bg-success my-3">
+                    <div class="card card-header text-warning">
+                        BEST REPLY
+                    </div>
+                    <div class="card-body text-white">
+                        {!! $discussion->bestReply->answer !!}
+                    </div>
+                </div>
+            @endif
+
         </div>
     </div>
-{{----}}
+
+    {{--***************************** REPLIES ********************************************--}}
     @foreach($discussion->replies()->paginate(5) as $reply)
         <div class="card my-2">
             <div class="card-header border border-success">
@@ -24,15 +38,28 @@
                             style="width: 30px; height: 30px; border-radius: 30%"
                             alt=""
                         >
-                        <span>{{$reply->owner->name}}</span>
+                        <span class="text-danger font-weight-bold">{{$reply->owner->name}}</span>
+                    </div>
+                    <div>
+                        @if(auth()->user()->id === $discussion->user_id)
+                            <form
+                                action="{{route('discussions.best-reply',['discussion'=> $discussion->slug, 'reply'=> $reply->id])}}"
+                                method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-sm btn-info">Mark As Best Reply</button>
+                            </form>
+                        @endauth
                     </div>
                 </div>
             </div>
+
             <div class="card-body border border-primary">
                 {!! $reply->answer !!}
             </div>
+
         </div>
     @endforeach
+    {{--*************************** END REPLIES ********************************************--}}
 
     <div class="d-flex justify-content-center">
         {{$discussion->replies()->paginate(5)->links()}}

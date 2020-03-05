@@ -33,3 +33,5 @@ php artisan make:model Reply -m
 *************************************************************
 php artisan make:request CreateReplyRequest
 *************************************************************
+php artisan migrate:refresh --seed
+*************************************************************
