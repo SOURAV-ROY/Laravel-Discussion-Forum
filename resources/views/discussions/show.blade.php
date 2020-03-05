@@ -62,7 +62,7 @@
                                 @csrf
                                 <button type="submit" class="btn btn-sm btn-info">Mark As Best Reply</button>
                             </form>
-                        @endauth
+                        @endif
                     </div>
                 </div>
             </div>
