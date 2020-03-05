@@ -14,11 +14,11 @@
             {!! $discussion->detail !!}
 
             @if($discussion->bestReply)
-                <div class="card bg-success my-3">
-                    <div class="card card-header text-warning">
+                <div class="card my-3">
+                    <div class="card card-header text-center bg-dark text-warning">
                         BEST REPLY
                     </div>
-                    <div class="card-body text-white">
+                    <div class="card-body bg-success text-white">
                         {!! $discussion->bestReply->answer !!}
                     </div>
                 </div>
