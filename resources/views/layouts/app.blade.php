@@ -32,10 +32,12 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
+
+                {{--*************************View Notifications Number Here****************--}}
                 <ul class="navbar-nav mr-auto">
                     @auth
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('users.notifications')}}" class="nav-link">
                                 <span class="badge badge-danger">
                                     Notifications {{auth()->user()->unreadNotifications->count()}}
                                 </span>
@@ -43,8 +45,9 @@
                         </li>
                     @endauth
                 </ul>
+            {{--*************************View Notifications Number Here****************--}}
 
-                <!-- Right Side Of Navbar -->
+            <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     @guest
