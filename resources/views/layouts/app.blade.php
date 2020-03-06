@@ -37,7 +37,7 @@
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <span class="badge badge-danger">
-                                    Notification {{auth()->user()->unreadNotifications->count()}}
+                                    Notifications {{auth()->user()->unreadNotifications->count()}}
                                 </span>
                             </a>
                         </li>

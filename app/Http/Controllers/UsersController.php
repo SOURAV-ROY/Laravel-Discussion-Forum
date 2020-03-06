@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    //
+    public function notifications()
+    {
+        
+    }
 }

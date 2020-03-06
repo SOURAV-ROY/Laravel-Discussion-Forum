@@ -44,9 +44,10 @@ class RepliesController extends Controller
             'discussion_id' => $discussion->id
         ]);
 
+//**********************Notify Send To The Author **********************************
         $discussion->author->notify(new NewReplyAdded($discussion));
 
-        session()->flash('success', 'Reply Added !');
+        session()->flash('success', 'Reply Added !!');
 
         return redirect()->back();
     }

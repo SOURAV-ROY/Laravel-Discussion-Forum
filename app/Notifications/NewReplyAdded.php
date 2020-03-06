@@ -22,7 +22,7 @@ class NewReplyAdded extends Notification
     /**
      * Create a new notification instance.
      *
-     * @return void
+     * @param Discussion $discussion
      */
     public function __construct(Discussion $discussion)
     {
