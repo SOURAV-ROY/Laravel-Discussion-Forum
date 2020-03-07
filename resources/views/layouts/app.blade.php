@@ -136,7 +136,11 @@
                                 {{--{{$channels}}--}}
                                 @foreach($channels as $channel)
                                     <li class="list-group-item">
-                                        {{$channel->name}}
+                                        <a href="{{route('discussions.index')}}?channel={{$channel->slug}}"
+                                           style="text-decoration: none"
+                                        >
+                                            {{$channel->name}}
+                                        </a>
                                     </li>
                                 @endforeach
                             </ul>

@@ -27,6 +27,23 @@ class Discussion extends Model
 //        return Reply::find($this->reply_id);
 //    }
 
+    public function scopeFilterByChannels($builder)
+    {
+        if (request()->query('channel')) {
+
+//************************************** FILTER ***********************************************
+            $channel = Channel::where('slug', request()->query('channel'))->first();
+
+            if ($channel) {
+                return $builder->where('channel_id', $channel->id);
+            }
+
+            return $builder;
+        }
+
+        return $builder;
+    }
+
     public function bestReply()
     {
         return $this->belongsTo(Reply::class, 'reply_id');

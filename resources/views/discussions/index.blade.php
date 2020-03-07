@@ -18,7 +18,7 @@
     @endforeach
 
     <div class="d-flex justify-content-center">
-        {{$discussions->links()}}
+        {{$discussions->appends(['channel'=> request()->query('channel')])->links()}}
     </div>
 
 @endsection
