@@ -10,7 +10,7 @@
                 @foreach($notifications as $notification)
                     <div class="list-group-item">
                         @if($notification->type === 'LaravelForum\Notifications\NewReplyAdded')
-                            {{--                            A New Reply Added to Your Discussion--}}
+                            {{--A New Reply Added to Your Discussion--}}
 
                             {{$notification->data['discussion']['title']}}
 
