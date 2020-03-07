@@ -44,7 +44,7 @@ class RepliesController extends Controller
             'discussion_id' => $discussion->id
         ]);
 
-        if ($discussion->author->id === auth()->user()->id) {
+        if ($discussion->author->id !== auth()->user()->id) {
 
 //**********************Notify Send To The Author **********************************
             $discussion->author->notify(new NewReplyAdded($discussion));
