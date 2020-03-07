@@ -83,7 +83,7 @@
 
     <div class="card my-3">
         <div class="card-header text-primary text-center font-weight-bolder">
-            Add a Reply
+            Add New Reply
         </div>
         <div class="card-body">
             @auth
@@ -92,7 +92,7 @@
                     <input type="hidden" name="answer" id="answer">
                     <trix-editor input="answer"></trix-editor>
                     <div class="text-center my-2">
-                        <button type="submit" class="btn btn-info">Add Reply</button>
+                        <button type="submit" class="btn btn-info">Send Reply</button>
                     </div>
                 </form>
             @else
