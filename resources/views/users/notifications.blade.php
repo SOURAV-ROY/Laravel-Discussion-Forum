@@ -9,6 +9,7 @@
             <ul class="list-group">
                 @foreach($notifications as $notification)
                     <li class="list-group-item">
+
                         @if($notification->type === 'LaravelForum\Notifications\NewReplyAdded')
 
                             Reply Added To <strong class="text-success">{{$notification->data['discussion']['title']}}</strong>

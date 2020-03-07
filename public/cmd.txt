@@ -43,3 +43,9 @@ php artisan make:controller UsersController
 *************************************************************
 php artisan make:notification MarkAsBestReplyNotification
 *************************************************************
+php artisan queue:table
+*************************************************************
+php artisan migrate
+*************************************************************
+php artisan queue:work
+*************************************************************

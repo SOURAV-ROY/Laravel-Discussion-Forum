@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use LaravelForum\Discussion;
 
-class NewReplyAdded extends Notification
+class NewReplyAdded extends Notification implements ShouldQueue
 {
     use Queueable;
 

@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use LaravelForum\Discussion;
 
-class MarkAsBestReplyNotification extends Notification
+class MarkAsBestReplyNotification extends Notification implements ShouldQueue
 {
     use Queueable;
     public $discussion;
