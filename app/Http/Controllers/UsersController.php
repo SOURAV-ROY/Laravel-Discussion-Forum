@@ -14,7 +14,7 @@ class UsersController extends Controller
 
         return view('users.notifications', [
 
-            'notifications' => auth()->user()->notifications()->paginate(5)
+            'notifications' => auth()->user()->notifications()->paginate(8)
         ]);
     }
 }

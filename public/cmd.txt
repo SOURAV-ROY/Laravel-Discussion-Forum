@@ -41,3 +41,5 @@ php artisan notifications:table
 *************************************************************
 php artisan make:controller UsersController
 *************************************************************
+php artisan make:notification MarkAsBestReplyNotification
+*************************************************************

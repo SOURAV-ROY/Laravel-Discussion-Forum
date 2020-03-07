@@ -8,18 +8,28 @@
 
             <ul class="list-group">
                 @foreach($notifications as $notification)
-                    <div class="list-group-item">
+                    <li class="list-group-item">
                         @if($notification->type === 'LaravelForum\Notifications\NewReplyAdded')
-                            {{--A New Reply Added to Your Discussion--}}
 
-                            {{$notification->data['discussion']['title']}}
+                            Reply Added To <strong class="text-success">{{$notification->data['discussion']['title']}}</strong>
 
                             <a href="{{route('discussions.show',$notification->data['discussion']['slug'])}}"
                                class="btn btn-sm btn-info float-right">
                                 View Discussion
                             </a>
                         @endif
-                    </div>
+
+                        @if($notification->type === 'LaravelForum\Notifications\MarkAsBestReplyNotification')
+
+                            Your Reply To <strong class="text-danger">{{$notification->data['discussion']['title']}}</strong>
+                            Mark As Best Reply
+                            <a href="{{route('discussions.show',$notification->data['discussion']['slug'])}}"
+                               class="btn btn-sm btn-info float-right">
+                                View Discussion
+                            </a>
+                        @endif
+
+                    </li>
                 @endforeach
             </ul>
 
