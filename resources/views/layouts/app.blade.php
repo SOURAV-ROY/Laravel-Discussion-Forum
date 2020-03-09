@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Discussion Forum') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/discussions') }}">
-                {{ config('app.name', 'Laravel') }}
+                {{ config('app.name', 'Discussion Forum') }}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -87,7 +87,7 @@
 
     {{--{{request()->path()}}--}}
 
-    @if(!in_array(request()->path(),['login','register','password/email','password/reset']))
+    @if(!in_array(request()->path(),['home','login','register','password/email','password/reset']))
 
         <main class="container py-4">
 
