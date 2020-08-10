@@ -6,6 +6,7 @@
         <div class="card-header text-center font-weight-bold">Add Discussion</div>
 
         <div class="card-body">
+            {{print_r($errors->all())}}
             {{--****************************************ERROR MESSAGE****************************************--}}
             @if($errors->any())
                 <div class="alert alert-danger">
